@@ -1,0 +1,9 @@
+commit 9af1d448b600bb93642a915517e7466f03570ade
+tree 12ae0726bfb64225505531009d87a1c168425bf4
+parent 7a20ec9435e8f2f82ab7561792198a8a40f9755d
+author Molema.Lema <lemamolema@hotmail.fr> 2019-12-28 01:38:38 +0000
+committer GitHub <noreply@github.com> 2019-12-28 01:38:38 +0000
+
+    Added another ressource
+
+:100644 100644 42bbfbd2e8dd76a22ef8eb4543bdaa8899873cc9 842e8b09cdeaffb5e61b50042bc8a179a1bfa917 M	main.tf

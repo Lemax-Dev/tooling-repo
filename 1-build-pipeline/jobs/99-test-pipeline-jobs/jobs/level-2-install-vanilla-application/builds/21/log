@@ -1,0 +1,36 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-2-install-vanilla-application
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Cloning the remote Git repository
+Cloning repository https://github.com/Lemax-Dev/control-repo.git
+ > git init /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-2-install-vanilla-application # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/control-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/control-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/control-repo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/control-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/control-repo.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/control-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a4f78bcd35f8f38581cc338a1ca60546de453cc3 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a4f78bcd35f8f38581cc338a1ca60546de453cc3 # timeout=10
+Commit message: "Merge pull request #2 from Lemax-Dev/UAT"
+ > git rev-list --no-walk a4f78bcd35f8f38581cc338a1ca60546de453cc3 # timeout=10
+[level-2-install-vanilla-application] $ /bin/sh -xe /tmp/jenkins4333334638883671782.sh
++ mkdir transfer
++ cd transfer
++ zip -r transfer.zip './*'
+	zip warning: name not matched: ./*
+
+zip error: Nothing to do! (try: zip -r transfer.zip . -i ./*)
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

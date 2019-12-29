@@ -1,0 +1,38 @@
+commit 672b0338cdcb1a2c1e77f71f9ec9c25b779f0f1d
+tree ea0e922f7ed1a34e92bb3fbcfc62fa46cdc51627
+parent b4cb455b1215999c823477e0e83b24f2b0e97a7d
+author Molema.Lema <lemamolema@hotmail.fr> 2019-12-28 23:10:35 +0000
+committer GitHub <noreply@github.com> 2019-12-28 23:10:35 +0000
+
+    Update bookingteam.tf
+
+:100644 100644 d208473d5dda966eb490788df0c92db99f2d6837 b16ebbe44822bdba083a8fb8efc0cdf75b493942 M	bookingteam.tf
+commit b4cb455b1215999c823477e0e83b24f2b0e97a7d
+tree 99d06dbe449299b09c8b3993bbec8f89ef82388d
+parent aeb3b7c97687913db6c528bd106d94e26beaeb8e
+author Molema.Lema <lemamolema@hotmail.fr> 2019-12-28 23:09:58 +0000
+committer GitHub <noreply@github.com> 2019-12-28 23:09:58 +0000
+
+    Update skywardsteam.tf
+
+:100644 100644 23aff21b37f23431079bcb0fd9fba2916eb26fb3 d1f8e40bd67e1a4ff4ba03a195e314f8685f42fb M	skywardsteam.tf
+commit aeb3b7c97687913db6c528bd106d94e26beaeb8e
+tree 0d740720d2910793ff5c8afc72142c30ff9b451a
+parent 7ab3e379224f3de9c4d4282cbec6b7ed201993df
+author Molema.Lema <lemamolema@hotmail.fr> 2019-12-28 23:09:23 +0000
+committer GitHub <noreply@github.com> 2019-12-28 23:09:23 +0000
+
+    Delete paymentteam.tf
+
+:100644 000000 efc45c7503411e4ecb8688cada81f2622d053a38 0000000000000000000000000000000000000000 D	paymentteam.tf
+commit 7ab3e379224f3de9c4d4282cbec6b7ed201993df
+tree 89db715b08ad06ccc016dffc1d51a73cadbceff7
+parent 39260b3d46db2ac8e1abccd6e06a875ea8322c21
+author Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 17:12:24 -0500
+committer Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 17:12:24 -0500
+
+    Jenkins CI/CD automated run
+
+
+:100644 100644 2eaa06ac40822382cd7dc11feb26853f1501f6d5 ffc3702df4db63105e72ac8293700c7915c2c617 M	terraform.tfstate
+:100644 100644 89af140e335bad53ace4f812bc0b615874e0adea 2eaa06ac40822382cd7dc11feb26853f1501f6d5 M	terraform.tfstate.backup

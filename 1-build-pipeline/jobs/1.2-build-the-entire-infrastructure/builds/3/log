@@ -1,0 +1,196 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.2-build-the-entire-infrastructure
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Cloning the remote Git repository
+Cloning repository https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git init /var/lib/jenkins/workspace/1-build-pipeline/1.2-build-the-entire-infrastructure # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 7080c2f62ff0b037c27356bdc5043d995b55cf30 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7080c2f62ff0b037c27356bdc5043d995b55cf30 # timeout=10
+Commit message: "Update main.tf"
+ > git rev-list --no-walk bd29a456688c2d1b89f9ecb59e3c65482fc2a600 # timeout=10
+[1.2-build-the-entire-infrastructure] $ /bin/sh -xe /tmp/jenkins3087787250372104284.sh
++ echo '==============Terraform Init=============='
+==============Terraform Init==============
++ terraform init
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins...
+- Downloading plugin for provider "aws" (hashicorp/aws) 2.43.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 2.43"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
++ echo '==============Terraform Plan=============='
+==============Terraform Plan==============
++ terraform plan
+[0m[1mRefreshing Terraform state in-memory prior to plan...[0m
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+[0m
+[0m[1maws_instance.bookingteam-dev-18476: Refreshing state... [id=i-0db868b27fef4e5c1][0m
+[0m[1maws_instance.bookingteam-dev-10484: Refreshing state... [id=i-09972b86fcce2da03][0m
+[0m[1maws_instance.uat: Refreshing state... [id=i-0e1de228f83a2ecdc][0m
+[0m[1maws_instance.bookingteam-dev-28078: Refreshing state... [id=i-071d9dcae4dc1705c][0m
+[0m[1maws_instance.production: Refreshing state... [id=i-0397dd3979f9c64bc][0m
+[0m[1maws_instance.bookingteam-dev-30297: Refreshing state... [id=i-0d8fa8aa8b1939de9][0m
+[0m[1maws_instance.bookingteam-dev-01: Refreshing state... [id=i-07ec52733607bd732][0m
+[0m[1maws_instance.skywardsteam-dev-01: Refreshing state... [id=i-01c8b96c5ff920317][0m
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # aws_subnet.bookingteam_subnet[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_subnet" "bookingteam_subnet" {
+      [32m+[0m [0m[1m[0marn[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false
+      [32m+[0m [0m[1m[0mavailability_zone[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mavailability_zone_id[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mcidr_block[0m[0m                      = "172.31.112.0/20"
+      [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block_association_id[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false
+      [32m+[0m [0m[1m[0mowner_id[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                            = {
+          [32m+[0m [0m"Name" = "bookingteam_subnet"
+        }
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-9c7fedf8"
+    }
+
+[1m  # aws_subnet.production_subnet[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_subnet" "production_subnet" {
+      [32m+[0m [0m[1m[0marn[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false
+      [32m+[0m [0m[1m[0mavailability_zone[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mavailability_zone_id[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mcidr_block[0m[0m                      = "172.31.80.0/20"
+      [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block_association_id[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false
+      [32m+[0m [0m[1m[0mowner_id[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                            = {
+          [32m+[0m [0m"Name" = "production_subnet"
+        }
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-9c7fedf8"
+    }
+
+[1m  # aws_subnet.skywards_subnet[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_subnet" "skywards_subnet" {
+      [32m+[0m [0m[1m[0marn[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false
+      [32m+[0m [0m[1m[0mavailability_zone[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mavailability_zone_id[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mcidr_block[0m[0m                      = "172.31.128.0/20"
+      [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block_association_id[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false
+      [32m+[0m [0m[1m[0mowner_id[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                            = {
+          [32m+[0m [0m"Name" = "skywards_subnet"
+        }
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-9c7fedf8"
+    }
+
+[1m  # aws_subnet.uat_subnet[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_subnet" "uat_subnet" {
+      [32m+[0m [0m[1m[0marn[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false
+      [32m+[0m [0m[1m[0mavailability_zone[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mavailability_zone_id[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mcidr_block[0m[0m                      = "172.31.96.0/20"
+      [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block_association_id[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false
+      [32m+[0m [0m[1m[0mowner_id[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                            = {
+          [32m+[0m [0m"Name" = "uat_subnet"
+        }
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                          = "vpc-9c7fedf8"
+    }
+
+[0m[1mPlan:[0m 4 to add, 0 to change, 0 to destroy.[0m
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+
++ echo '==============Terraform Apply=============='
+==============Terraform Apply==============
++ terraform apply -auto-approve
+[0m[1maws_instance.bookingteam-dev-01: Refreshing state... [id=i-07ec52733607bd732][0m
+[0m[1maws_instance.bookingteam-dev-18476: Refreshing state... [id=i-0db868b27fef4e5c1][0m
+[0m[1maws_instance.bookingteam-dev-28078: Refreshing state... [id=i-071d9dcae4dc1705c][0m
+[0m[1maws_instance.uat: Refreshing state... [id=i-0e1de228f83a2ecdc][0m
+[0m[1maws_instance.bookingteam-dev-10484: Refreshing state... [id=i-09972b86fcce2da03][0m
+[0m[1maws_instance.bookingteam-dev-30297: Refreshing state... [id=i-0d8fa8aa8b1939de9][0m
+[0m[1maws_instance.production: Refreshing state... [id=i-0397dd3979f9c64bc][0m
+[0m[1maws_instance.skywardsteam-dev-01: Refreshing state... [id=i-01c8b96c5ff920317][0m
+[0m[1maws_subnet.production_subnet: Creating...[0m[0m
+[0m[1maws_subnet.skywards_subnet: Creating...[0m[0m
+[0m[1maws_subnet.bookingteam_subnet: Creating...[0m[0m
+[0m[1maws_subnet.uat_subnet: Creating...[0m[0m
+[0m[1maws_subnet.bookingteam_subnet: Creation complete after 1s [id=subnet-0fd28a4cd5ab65217][0m[0m
+[0m[1maws_subnet.uat_subnet: Creation complete after 1s [id=subnet-015bab2e22a25f13d][0m[0m
+[0m[1maws_subnet.production_subnet: Creation complete after 1s [id=subnet-010f2b1e0001d1701][0m[0m
+[0m[1maws_subnet.skywards_subnet: Creation complete after 1s [id=subnet-0ea2e7fc082fe7a0e][0m[0m
+[0m[1m[32m
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.[0m
++ echo '==============Git Add=============='
+==============Git Add==============
++ git add .
++ echo '==============Git Commit=============='
+==============Git Commit==============
++ git commit -m 'Jenkins CI/CD automated build run'
+[detached HEAD 9e6d7da] Jenkins CI/CD automated build run
+ 2 files changed, 194 insertions(+), 2 deletions(-)
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Pushing HEAD to branch master at repo origin
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git push https://github.com/Lemax-Dev/infrastructure-repo.git HEAD:master # timeout=10
+Finished: SUCCESS

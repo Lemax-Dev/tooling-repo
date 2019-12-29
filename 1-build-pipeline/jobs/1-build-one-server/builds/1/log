@@ -1,0 +1,23 @@
+Started by GitHub push by Lemax-Dev
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git init /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 7a20ec9435e8f2f82ab7561792198a8a40f9755d (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7a20ec9435e8f2f82ab7561792198a8a40f9755d # timeout=10
+Commit message: "Update README.md"
+First time build. Skipping changelog.
+Finished: SUCCESS

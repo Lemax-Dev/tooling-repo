@@ -1,0 +1,12 @@
+Started on Dec 28, 2019 12:26:56 AM
+Started by event from 140.82.115.248 ⇒ http://34.255.114.198:8080/github-webhook/ on Sat Dec 28 00:26:56 EST 2019
+Using strategy: Default
+[poll] Last Built Revision: Revision 97d6db5f1140e47a7a0728ee225a741f83202d1e (refs/remotes/origin/master)
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git ls-remote -h https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Found 1 remote heads on https://github.com/Lemax-Dev/infrastructure-repo.git
+[poll] Latest remote head revision on refs/heads/master is: 29cdf99e78abdd4bb67c87e999993a0fdd61b586
+Done. Took 0.5 sec
+Changes found

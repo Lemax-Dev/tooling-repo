@@ -1,0 +1,191 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-2-install-vanilla-application
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Cloning the remote Git repository
+Cloning repository https://github.com/Lemax-Dev/control-repo.git
+ > git init /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-2-install-vanilla-application # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/control-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/control-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/control-repo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/control-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/control-repo.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/control-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a4f78bcd35f8f38581cc338a1ca60546de453cc3 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a4f78bcd35f8f38581cc338a1ca60546de453cc3 # timeout=10
+Commit message: "Merge pull request #2 from Lemax-Dev/UAT"
+ > git rev-list --no-walk a4f78bcd35f8f38581cc338a1ca60546de453cc3 # timeout=10
+[level-2-install-vanilla-application] $ /bin/sh -xe /tmp/jenkins4144842423679850872.sh
++ zip -r transfer.zip ./about.html ./contact.html ./destinations.html ./elements.html ./images ./index.html ./js ./news.html ./plugins ./README.md ./styles
+  adding: about.html (deflated 82%)
+  adding: contact.html (deflated 78%)
+  adding: destinations.html (deflated 84%)
+  adding: elements.html (deflated 84%)
+  adding: images/ (stored 0%)
+  adding: images/about.jpg (deflated 1%)
+  adding: images/about_1.jpg (deflated 0%)
+  adding: images/around.svg (deflated 57%)
+  adding: images/beach.svg (deflated 66%)
+  adding: images/boat.svg (deflated 75%)
+  adding: images/camera.svg (deflated 70%)
+  adding: images/contact.jpg (deflated 1%)
+  adding: images/destination_1.jpg (deflated 0%)
+  adding: images/destination_2.jpg (deflated 0%)
+  adding: images/destination_3.jpg (deflated 0%)
+  adding: images/destination_4.jpg (deflated 1%)
+  adding: images/destination_5.jpg (deflated 0%)
+  adding: images/destination_6.jpg (deflated 0%)
+  adding: images/destination_7.jpg (deflated 2%)
+  adding: images/destination_8.jpg (deflated 1%)
+  adding: images/destination_9.jpg (deflated 2%)
+  adding: images/destinations.jpg (deflated 2%)
+  adding: images/elements.jpg (deflated 3%)
+  adding: images/footer_1.jpg (deflated 0%)
+  adding: images/home_slider.jpg (deflated 4%)
+  adding: images/intro.png (deflated 1%)
+  adding: images/island.svg (deflated 58%)
+  adding: images/latest_1.jpg (deflated 6%)
+  adding: images/latest_2.jpg (deflated 14%)
+  adding: images/latest_3.jpg (deflated 6%)
+  adding: images/mountain.svg (deflated 64%)
+  adding: images/news.jpg (deflated 1%)
+  adding: images/news_1.jpg (deflated 2%)
+  adding: images/news_2.jpg (deflated 1%)
+  adding: images/news_3.jpg (deflated 0%)
+  adding: images/news_4.jpg (deflated 2%)
+  adding: images/news_5.jpg (deflated 0%)
+  adding: images/news_6.jpg (deflated 0%)
+  adding: images/sign.svg (deflated 59%)
+  adding: images/suitcase.svg (deflated 69%)
+  adding: images/team_1.jpg (deflated 4%)
+  adding: images/team_2.jpg (deflated 4%)
+  adding: images/team_3.jpg (deflated 3%)
+  adding: images/team_4.jpg (deflated 3%)
+  adding: images/testimonials.jpg (deflated 2%)
+  adding: images/travello.jpg (deflated 0%)
+  adding: images/trekking.svg (deflated 58%)
+  adding: images/wallet.svg (deflated 73%)
+  adding: images/why.jpg (deflated 1%)
+  adding: images/why_1.jpg (deflated 2%)
+  adding: images/why_1.svg (deflated 57%)
+  adding: images/why_2.jpg (deflated 0%)
+  adding: images/why_2.svg (deflated 58%)
+  adding: images/why_3.jpg (deflated 1%)
+  adding: images/why_3.svg (deflated 57%)
+  adding: index.html (deflated 84%)
+  adding: js/ (stored 0%)
+  adding: js/about.js (deflated 67%)
+  adding: js/contact.js (deflated 65%)
+  adding: js/custom.js (deflated 69%)
+  adding: js/destinations.js (deflated 68%)
+  adding: js/elements.js (deflated 71%)
+  adding: js/jquery-3.2.1.min.js (deflated 65%)
+  adding: js/news.js (deflated 68%)
+  adding: news.html (deflated 83%)
+  adding: plugins/ (stored 0%)
+  adding: plugins/Isotope/ (stored 0%)
+  adding: plugins/Isotope/isotope.pkgd.min.js (deflated 72%)
+  adding: plugins/OwlCarousel2-2.2.1/ (stored 0%)
+  adding: plugins/OwlCarousel2-2.2.1/ajax-loader.gif (deflated 19%)
+  adding: plugins/OwlCarousel2-2.2.1/animate.css (deflated 94%)
+  adding: plugins/OwlCarousel2-2.2.1/owl.carousel.css (deflated 74%)
+  adding: plugins/OwlCarousel2-2.2.1/owl.carousel.js (deflated 78%)
+  adding: plugins/OwlCarousel2-2.2.1/owl.theme.default.css (deflated 61%)
+  adding: plugins/OwlCarousel2-2.2.1/owl.video.play.png (deflated 5%)
+  adding: plugins/easing/ (stored 0%)
+  adding: plugins/easing/easing.js (deflated 76%)
+  adding: plugins/font-awesome-4.7.0/ (stored 0%)
+  adding: plugins/font-awesome-4.7.0/HELP-US-OUT.txt (deflated 34%)
+  adding: plugins/font-awesome-4.7.0/css/ (stored 0%)
+  adding: plugins/font-awesome-4.7.0/css/font-awesome.css (deflated 80%)
+  adding: plugins/font-awesome-4.7.0/css/font-awesome.min.css (deflated 77%)
+  adding: plugins/font-awesome-4.7.0/fonts/ (stored 0%)
+  adding: plugins/font-awesome-4.7.0/fonts/FontAwesome.otf (deflated 18%)
+  adding: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.eot (deflated 41%)
+  adding: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.svg (deflated 69%)
+  adding: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf (deflated 41%)
+  adding: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff (deflated 0%)
+  adding: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2 (deflated 0%)
+  adding: plugins/font-awesome-4.7.0/less/ (stored 0%)
+  adding: plugins/font-awesome-4.7.0/less/animated.less (deflated 74%)
+  adding: plugins/font-awesome-4.7.0/less/bordered-pulled.less (deflated 63%)
+  adding: plugins/font-awesome-4.7.0/less/core.less (deflated 40%)
+  adding: plugins/font-awesome-4.7.0/less/fixed-width.less (deflated 20%)
+  adding: plugins/font-awesome-4.7.0/less/font-awesome.less (deflated 55%)
+  adding: plugins/font-awesome-4.7.0/less/icons.less (deflated 87%)
+  adding: plugins/font-awesome-4.7.0/less/larger.less (deflated 52%)
+  adding: plugins/font-awesome-4.7.0/less/list.less (deflated 46%)
+  adding: plugins/font-awesome-4.7.0/less/mixins.less (deflated 53%)
+  adding: plugins/font-awesome-4.7.0/less/path.less (deflated 66%)
+  adding: plugins/font-awesome-4.7.0/less/rotated-flipped.less (deflated 65%)
+  adding: plugins/font-awesome-4.7.0/less/screen-reader.less (deflated 47%)
+  adding: plugins/font-awesome-4.7.0/less/stacked.less (deflated 54%)
+  adding: plugins/font-awesome-4.7.0/less/variables.less (deflated 75%)
+  adding: plugins/font-awesome-4.7.0/scss/ (stored 0%)
+  adding: plugins/font-awesome-4.7.0/scss/_animated.scss (deflated 74%)
+  adding: plugins/font-awesome-4.7.0/scss/_bordered-pulled.scss (deflated 63%)
+  adding: plugins/font-awesome-4.7.0/scss/_core.scss (deflated 41%)
+  adding: plugins/font-awesome-4.7.0/scss/_fixed-width.scss (deflated 20%)
+  adding: plugins/font-awesome-4.7.0/scss/_icons.scss (deflated 87%)
+  adding: plugins/font-awesome-4.7.0/scss/_larger.scss (deflated 52%)
+  adding: plugins/font-awesome-4.7.0/scss/_list.scss (deflated 47%)
+  adding: plugins/font-awesome-4.7.0/scss/_mixins.scss (deflated 54%)
+  adding: plugins/font-awesome-4.7.0/scss/_path.scss (deflated 66%)
+  adding: plugins/font-awesome-4.7.0/scss/_rotated-flipped.scss (deflated 66%)
+  adding: plugins/font-awesome-4.7.0/scss/_screen-reader.scss (deflated 46%)
+  adding: plugins/font-awesome-4.7.0/scss/_stacked.scss (deflated 55%)
+  adding: plugins/font-awesome-4.7.0/scss/_variables.scss (deflated 75%)
+  adding: plugins/font-awesome-4.7.0/scss/font-awesome.scss (deflated 49%)
+  adding: plugins/greensock/ (stored 0%)
+  adding: plugins/greensock/ScrollToPlugin.min.js (deflated 56%)
+  adding: plugins/greensock/TimelineMax.min.js (deflated 71%)
+  adding: plugins/greensock/TweenMax.min.js (deflated 67%)
+  adding: plugins/greensock/animation.gsap.min.js (deflated 50%)
+  adding: plugins/parallax-js-master/ (stored 0%)
+  adding: plugins/parallax-js-master/parallax.min.js (deflated 66%)
+  adding: plugins/progressbar/ (stored 0%)
+  adding: plugins/progressbar/progressbar.min.js (deflated 68%)
+  adding: plugins/scrollTo/ (stored 0%)
+  adding: plugins/scrollTo/jquery.scrollTo.min.js (deflated 48%)
+  adding: plugins/scrollmagic/ (stored 0%)
+  adding: plugins/scrollmagic/ScrollMagic.min.js (deflated 65%)
+  adding: README.md (deflated 13%)
+  adding: styles/ (stored 0%)
+  adding: styles/about.css (deflated 83%)
+  adding: styles/about_responsive.css (deflated 78%)
+  adding: styles/bootstrap4/ (stored 0%)
+  adding: styles/bootstrap4/bootstrap.min.css (deflated 85%)
+  adding: styles/bootstrap4/bootstrap.min.js (deflated 74%)
+  adding: styles/bootstrap4/popper.js (deflated 74%)
+  adding: styles/contact.css (deflated 84%)
+  adding: styles/contact_responsive.css (deflated 79%)
+  adding: styles/destinations.css (deflated 83%)
+  adding: styles/destinations_responsive.css (deflated 78%)
+  adding: styles/elements.css (deflated 84%)
+  adding: styles/elements_responsive.css (deflated 78%)
+  adding: styles/main_styles.css (deflated 84%)
+  adding: styles/news.css (deflated 84%)
+  adding: styles/news_responsive.css (deflated 78%)
+  adding: styles/responsive.css (deflated 78%)
++ id
+uid=997(jenkins) gid=994(jenkins) groups=994(jenkins) context=system_u:system_r:initrc_t:s0
++ echo /var/lib/jenkins
+/var/lib/jenkins
++ sudo su
++ id
+uid=997(jenkins) gid=994(jenkins) groups=994(jenkins) context=system_u:system_r:initrc_t:s0
++ ssh -t ec2-user@34.244.13.76
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Host key verification failed.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

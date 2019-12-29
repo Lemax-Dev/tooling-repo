@@ -1,0 +1,152 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Cloning the remote Git repository
+Cloning repository https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git init /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision b79cbbb1228b29a357450465ce1a9beb35bdba4c (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b79cbbb1228b29a357450465ce1a9beb35bdba4c # timeout=10
+Commit message: "Jenkins CI/CD automated run"
+ > git rev-list --no-walk b79cbbb1228b29a357450465ce1a9beb35bdba4c # timeout=10
+[level-1-build-server] $ /bin/sh -xe /tmp/jenkins6678605105970989649.sh
++ echo '==============Terraform Init=============='
+==============Terraform Init==============
++ terraform init
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins...
+- Downloading plugin for provider "aws" (hashicorp/aws) 2.43.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 2.43"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
++ echo '==============Test if Booking Team=============='
+==============Test if Booking Team==============
++ '[' bookingteam == bookingteam ']'
++ echo 'resource aws_instance bookingteam-dev-02 {
+  ami  = ami-0ee2cc04e6a530d94
+  instance_type  = t2.micro
+  vpc_security_group_ids  = [sg-0008be08e1a39844f]
+  key_name  = lemaxdevkey  
+  tags = {
+    Name  = bookingteam-dev-02
+  }
+  root_block_device {
+    volume_size  = 15
+  }
+}'
++ echo '==============CAT THE FILE=============='
+==============CAT THE FILE==============
++ cat bookingteam.tf
+resource "aws_instance" "bookingteam-dev-01" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-01"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}
+resource aws_instance bookingteam-dev-02 {
+  ami  = ami-0ee2cc04e6a530d94
+  instance_type  = t2.micro
+  vpc_security_group_ids  = [sg-0008be08e1a39844f]
+  key_name  = lemaxdevkey  
+  tags = {
+    Name  = bookingteam-dev-02
+  }
+  root_block_device {
+    volume_size  = 15
+  }
+}
++ echo '==============Test if Skywards Team=============='
+==============Test if Skywards Team==============
++ '[' bookingteam == skywardsteam ']'
++ echo '==============Terraform Plan=============='
+==============Terraform Plan==============
++ terraform plan
+[31m
+[1m[31mError: [0m[0m[1mInvalid reference[0m
+
+[0m  on bookingteam.tf line 14, in resource "aws_instance" "bookingteam-dev-02":
+  14:   ami  = [4mami-0ee2cc04e6a530d94[0m
+[0m
+A reference to a resource type must be followed by at least one attribute
+access, specifying the resource name.
+[0m[0m
+[31m
+[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+
+[0m  on bookingteam.tf line 15, in resource "aws_instance" "bookingteam-dev-02":
+  15:   instance_type  = [4mt2.micro[0m
+[0m
+A managed resource "t2" "micro" has not been declared in the root module.
+[0m[0m
+[31m
+[1m[31mError: [0m[0m[1mInvalid reference[0m
+
+[0m  on bookingteam.tf line 16, in resource "aws_instance" "bookingteam-dev-02":
+  16:   vpc_security_group_ids  = [[4msg-0008be08e1a39844f[0m]
+[0m
+A reference to a resource type must be followed by at least one attribute
+access, specifying the resource name.
+[0m[0m
+[31m
+[1m[31mError: [0m[0m[1mInvalid reference[0m
+
+[0m  on bookingteam.tf line 17, in resource "aws_instance" "bookingteam-dev-02":
+  17:   key_name  = [4mlemaxdevkey[0m  
+[0m
+A reference to a resource type must be followed by at least one attribute
+access, specifying the resource name.
+[0m[0m
+[31m
+[1m[31mError: [0m[0m[1mInvalid reference[0m
+
+[0m  on bookingteam.tf line 19, in resource "aws_instance" "bookingteam-dev-02":
+  19:     Name  = [4mbookingteam-dev-02[0m
+[0m
+A reference to a resource type must be followed by at least one attribute
+access, specifying the resource name.
+[0m[0m
+Build step 'Execute shell' marked build as failure
+Build did not succeed and the project is configured to only push after a successful build, so no pushing will occur.
+Finished: FAILURE

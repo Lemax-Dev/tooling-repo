@@ -1,0 +1,43 @@
+Started by upstream project "[8mha:////4IhHdzO533c+yyCRgttsTy3je15q41vYmdBaHYQ3DhY8AAAAoh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzFEgZt/az8JH1D3aTSzJwU3YLMglSgzanYBQEVQiG14AAAAA==[0m1-build-pipeline/1-build-pipeline" build number [8mha:////4AUviP5w04OVXpSoQ99w02p8up6rEXkEzdKz70Q+lioFAAAApB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZd/az8JH1D3aTSzJwU3YLMglSgzanYBY0NAA6iX0fiAAAA[0m30
+originally caused by:
+ Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-2-install-vanilla-application
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+[level-2-install-vanilla-application] $ /bin/sh -xe /tmp/jenkins8864648296397443124.sh
++ ssh ec2-user@34.244.97.78 '
+sudo yum install -y httpd;
+sudo service httpd start;
+sudo systemctl enable httpd;
+sudo service httpd status
+'
+Loaded plugins: amazon-id, rhui-lb
+Package httpd-2.4.6-90.el7.x86_64 already installed and latest version
+Nothing to do
+Redirecting to /bin/systemctl start  httpd.service
+Redirecting to /bin/systemctl status  httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sat 2019-12-28 12:05:37 EST; 4h 14min ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 970 (httpd)
+   Status: "Total requests: 82; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 970 /usr/sbin/httpd -DFOREGROUND
+           ├─ 971 /usr/sbin/httpd -DFOREGROUND
+           ├─ 972 /usr/sbin/httpd -DFOREGROUND
+           ├─ 974 /usr/sbin/httpd -DFOREGROUND
+           ├─ 975 /usr/sbin/httpd -DFOREGROUND
+           ├─ 999 /usr/sbin/httpd -DFOREGROUND
+           ├─1030 /usr/sbin/httpd -DFOREGROUND
+           ├─1031 /usr/sbin/httpd -DFOREGROUND
+           ├─1032 /usr/sbin/httpd -DFOREGROUND
+           ├─1033 /usr/sbin/httpd -DFOREGROUND
+           └─1384 /usr/sbin/httpd -DFOREGROUND
+
+Dec 28 12:05:37 ip-172-31-34-195 systemd[1]: Starting The Apache HTTP Server...
+Dec 28 12:05:37 ip-172-31-34-195 systemd[1]: Started The Apache HTTP Server.
+Finished: SUCCESS

@@ -1,0 +1,255 @@
+Started by upstream project "[8mha:////4IhHdzO533c+yyCRgttsTy3je15q41vYmdBaHYQ3DhY8AAAAoh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzFEgZt/az8JH1D3aTSzJwU3YLMglSgzanYBQEVQiG14AAAAA==[0m1-build-pipeline/1-build-pipeline" build number [8mha:////4IaEt/k90mF8FflwhIdenfoWB3C1Ya26QeJ/Po9KGqHVAAAApB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZd/az8JH1D3aTSzJwU3YLMglSgzanYBY0NAZiSWDDiAAAA[0m31
+originally caused by:
+ Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Cloning the remote Git repository
+Cloning repository https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git init /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision f755c7a4369afbbec7d2d78552a50c694f19531b (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f755c7a4369afbbec7d2d78552a50c694f19531b # timeout=10
+Commit message: "Update main.tf"
+ > git rev-list --no-walk 56b20859e91736c64e4dd775541d1f948e711a0c # timeout=10
+[level-1-build-server] $ /bin/sh -xe /tmp/jenkins2927472019737540500.sh
++ echo '==============Terraform Init=============='
+==============Terraform Init==============
++ terraform init
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins...
+- Downloading plugin for provider "aws" (hashicorp/aws) 2.43.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 2.43"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
++ echo '==============Terraform Plan=============='
+==============Terraform Plan==============
++ terraform plan
+[0m[1mRefreshing Terraform state in-memory prior to plan...[0m
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+[0m
+[0m[1maws_instance.bookingteam-dev-01: Refreshing state... [id=i-0020cb038eda28627][0m
+[0m[1maws_instance.bookingteam-dev-02: Refreshing state... [id=i-075a120f13beab4ec][0m
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+  [31m-[0m destroy
+[0m
+Terraform will perform the following actions:
+
+[1m  # aws_instance.bookingteam-dev--02[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_instance" "bookingteam-dev--02" {
+      [32m+[0m [0m[1m[0mami[0m[0m                          = "ami-0ee2cc04e6a530d94"
+      [32m+[0m [0m[1m[0marn[0m[0m                          = (known after apply)
+      [32m+[0m [0m[1m[0massociate_public_ip_address[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mavailability_zone[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mcpu_core_count[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mcpu_threads_per_core[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mget_password_data[0m[0m            = false
+      [32m+[0m [0m[1m[0mhost_id[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                           = (known after apply)
+      [32m+[0m [0m[1m[0minstance_state[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0minstance_type[0m[0m                = "t2.micro"
+      [32m+[0m [0m[1m[0mipv6_address_count[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_addresses[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mkey_name[0m[0m                     = "lemaxdevkey"
+      [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mpassword_data[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mplacement_group[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mprimary_network_interface_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_dns[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_dns[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0msecurity_groups[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0msource_dest_check[0m[0m            = true
+      [32m+[0m [0m[1m[0msubnet_id[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                         = {
+          [32m+[0m [0m"Name" = "bookingteam-dev-02"
+        }
+      [32m+[0m [0m[1m[0mtenancy[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0mvolume_tags[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mvpc_security_group_ids[0m[0m       = [
+          [32m+[0m [0m"sg-0008be08e1a39844f",
+        ]
+
+      [32m+[0m [0mebs_block_device {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0msnapshot_id[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_size[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+        }
+
+      [32m+[0m [0mephemeral_block_device {
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m  = (known after apply)
+          [32m+[0m [0m[1m[0mno_device[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mvirtual_name[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mnetwork_interface {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_index[0m[0m          = (known after apply)
+          [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m  = (known after apply)
+        }
+
+      [32m+[0m [0mroot_block_device {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = true
+          [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_size[0m[0m           = 15
+          [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+        }
+    }
+
+[1m  # aws_instance.bookingteam-dev-02[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "aws_instance" "bookingteam-dev-02" {
+      [31m-[0m [0m[1m[0mami[0m[0m                          = "ami-0ee2cc04e6a530d94" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0marn[0m[0m                          = "arn:aws:ec2:eu-west-1:897877382310:instance/i-075a120f13beab4ec" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0massociate_public_ip_address[0m[0m  = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m            = "eu-west-1c" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcpu_core_count[0m[0m               = 1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcpu_threads_per_core[0m[0m         = 1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdisable_api_termination[0m[0m      = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mebs_optimized[0m[0m                = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mget_password_data[0m[0m            = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                           = "i-075a120f13beab4ec" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minstance_state[0m[0m               = "running" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minstance_type[0m[0m                = "t2.micro" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mipv6_address_count[0m[0m           = 0 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mipv6_addresses[0m[0m               = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkey_name[0m[0m                     = "lemaxdevkey" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmonitoring[0m[0m                   = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprimary_network_interface_id[0m[0m = "eni-0725942fc1740d603" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_dns[0m[0m                  = "ip-172-31-33-197.eu-west-1.compute.internal" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip[0m[0m                   = "172.31.33.197" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_dns[0m[0m                   = "ec2-34-243-196-212.eu-west-1.compute.amazonaws.com" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip[0m[0m                    = "34.243.196.212" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_groups[0m[0m              = [
+          [31m-[0m [0m"Future Airlines - App Security group - Default",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msource_dest_check[0m[0m            = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m                    = "subnet-a4ad10fc" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                         = {
+          [31m-[0m [0m"Name" = "bookingteam-dev-02"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenancy[0m[0m                      = "default" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvolume_tags[0m[0m                  = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvpc_security_group_ids[0m[0m       = [
+          [31m-[0m [0m"sg-0008be08e1a39844f",
+        ] [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mcredit_specification {
+          [31m-[0m [0m[1m[0mcpu_credits[0m[0m = "standard" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0mroot_block_device {
+          [31m-[0m [0m[1m[0mdelete_on_termination[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mencrypted[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0miops[0m[0m                  = 100 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mvolume_id[0m[0m             = "vol-03e7651b530b91226" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mvolume_size[0m[0m           = 15 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mvolume_type[0m[0m           = "gp2" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[0m[1mPlan:[0m 1 to add, 0 to change, 1 to destroy.[0m
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+
++ echo '==============Terraform Apply=============='
+==============Terraform Apply==============
++ terraform apply -auto-approve
+[0m[1maws_instance.bookingteam-dev-01: Refreshing state... [id=i-0020cb038eda28627][0m
+[0m[1maws_instance.bookingteam-dev-02: Refreshing state... [id=i-075a120f13beab4ec][0m
+[0m[1maws_instance.bookingteam-dev-02: Destroying... [id=i-075a120f13beab4ec][0m[0m
+[0m[1maws_instance.bookingteam-dev--02: Creating...[0m[0m
+[0m[1maws_instance.bookingteam-dev-02: Still destroying... [id=i-075a120f13beab4ec, 10s elapsed][0m[0m
+[0m[1maws_instance.bookingteam-dev--02: Still creating... [10s elapsed][0m[0m
+[0m[1maws_instance.bookingteam-dev-02: Still destroying... [id=i-075a120f13beab4ec, 20s elapsed][0m[0m
+[0m[1maws_instance.bookingteam-dev--02: Still creating... [20s elapsed][0m[0m
+[0m[1maws_instance.bookingteam-dev-02: Destruction complete after 29s[0m[0m
+[0m[1maws_instance.bookingteam-dev--02: Still creating... [30s elapsed][0m[0m
+[0m[1maws_instance.bookingteam-dev--02: Still creating... [40s elapsed][0m[0m
+[0m[1maws_instance.bookingteam-dev--02: Creation complete after 41s [id=i-0016d6f9d164ea1bd][0m[0m
+[0m[1m[32m
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.[0m
++ echo '==============Git status=============='
+==============Git status==============
++ git status
+# HEAD detached at f755c7a
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   terraform.tfstate
+#	modified:   terraform.tfstate.backup
+#
+no changes added to commit (use "git add" and/or "git commit -a")
++ echo '==============Git Set Up=============='
+==============Git Set Up==============
++ echo '==============Git Add=============='
+==============Git Add==============
++ git add .
++ echo '==============Git Commit=============='
+==============Git Commit==============
++ git commit -m 'Jenkins CI/CD automated run'
+[detached HEAD 9cdbe32] Jenkins CI/CD automated run
+ 2 files changed, 99 insertions(+), 23 deletions(-)
++ echo '==============Git Push=============='
+==============Git Push==============
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Pushing HEAD to branch master at repo origin
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git push https://github.com/Lemax-Dev/infrastructure-repo.git HEAD:master # timeout=10
+Finished: SUCCESS

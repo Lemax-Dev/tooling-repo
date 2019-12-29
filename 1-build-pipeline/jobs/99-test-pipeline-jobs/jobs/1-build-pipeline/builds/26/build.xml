@@ -1,0 +1,94 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.36">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>lemaxadmin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.15">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <jenkins.model.InterruptedBuildAction>
+      <causes class="com.google.common.collect.ImmutableList">
+        <org.jenkinsci.plugins.workflow.support.steps.build.DownstreamFailureCause plugin="pipeline-build-step@2.10">
+          <id>1-build-pipeline/1.1-build-pipeline-jobs/level-3-deploy-a-specific-version-of-the-codes#4</id>
+        </org.jenkinsci.plugins.workflow.support.steps.build.DownstreamFailureCause>
+      </causes>
+    </jenkins.model.InterruptedBuildAction>
+  </actions>
+  <queueId>194</queueId>
+  <timestamp>1577567410550</timestamp>
+  <startTime>1577567410552</startTime>
+  <result>FAILURE</result>
+  <duration>9184</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>node {
+
+    paramTARGETSERVERIP = &quot;34.244.97.78&quot; 
+    paramDEPLOYBRANCH = &quot;UAT&quot;
+//    stage(&apos;Level 1 - Build server&apos;) {
+//        build job: &apos;./1.1-build-pipeline-jobs/level-1-build-server&apos;
+//    }
+
+//    stage(&apos;Level 2 - Install Vanilla Application&apos;) {
+//        build job: &apos;./1.1-build-pipeline-jobs/level-2-install-vanilla-application&apos;, parameters: [
+//            string(name: &apos;TARGETSERVERIP&apos;, value: paramTARGETSERVERIP)
+//            ]
+//    }
+
+    stage(&apos;Level 3 - Deploy A Specific version of the codes&apos;) {
+        build job: &apos;./1.1-build-pipeline-jobs/level-3-deploy-a-specific-version-of-the-codes&apos;, parameters: [
+           string(name: &apos;TARGETSERVERIP&apos;, value: paramTARGETSERVERIP),
+           string(name: &apos;TARGETSERVERIP&apos;, value: paramDEPLOYBRANCH)
+            ]
+    }
+
+//      stage(&apos;Final - Build Pipeline Completed&apos;) {
+//         steps {
+//            echo &apos;Hello World&apos;
+//         }
+//      }
+//    }
+}</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>84302861</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>4806968</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>131799022</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>12448214</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>11032557</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>12</iota>
+    <head>1:12</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

@@ -1,0 +1,63 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision bb731b846d87cbcf8736c55e2549542ceb1dcd41 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f bb731b846d87cbcf8736c55e2549542ceb1dcd41 # timeout=10
+Commit message: "test"
+ > git rev-list --no-walk bb731b846d87cbcf8736c55e2549542ceb1dcd41 # timeout=10
+[level-1-build-server] $ /bin/sh -xe /tmp/jenkins1703020125015119434.sh
++ pwd
+/var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
++ ls
+main.tf
+README.md
+terraform.tfstate
+terraform.tfstate.backup
++ echo /var/lib/jenkins
+/var/lib/jenkins
++ echo '==============Terraform Init=============='
+==============Terraform Init==============
++ echo '==============Terraform Plan=============='
+==============Terraform Plan==============
++ echo '==============Terraform Apply=============='
+==============Terraform Apply==============
++ touch molema.txt
++ echo '==============Git status=============='
+==============Git status==============
++ git status
+# HEAD detached at bb731b8
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	molema.txt
+nothing added to commit but untracked files present (use "git add" to track)
++ echo '==============Git Set Up=============='
+==============Git Set Up==============
++ git config --global user.email lemamolema@hotmail.fr
++ git config --global user.name Lemax-Dev
++ echo '==============Git Add=============='
+==============Git Add==============
++ git add .
++ echo '==============Git Commit=============='
+==============Git Commit==============
++ git commit -m 'Jenkins CI/CD automated run'
+[detached HEAD d1de0ed] Jenkins CI/CD automated run
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 molema.txt
++ echo '==============Git Push=============='
+==============Git Push==============
++ git push origin master
+fatal: could not read Username for 'https://github.com': No such device or address
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

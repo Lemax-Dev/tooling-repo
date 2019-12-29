@@ -1,0 +1,11 @@
+commit d4a7f5a4edc0ab5a4d5e96bc84e8669e6101a8c9
+tree c9fc0b4d68873bd4f9bd7996b11cfc5a12a9e2fa
+parent f32a647527fa5182f5156f71e369b18648af1fa8
+author Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 06:30:55 -0500
+committer Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 06:30:55 -0500
+
+    Jenkins CI/CD automated run
+
+
+:100644 100644 ab8e03294ffe200bc20c1b1e27b5edc1ae24736c 3aafc8cf4300479873bb32d205ad386bc0c2881a M	terraform.tfstate
+:100644 100644 269cb141c85040b3dc3fe3f4048217451ede4c50 ab8e03294ffe200bc20c1b1e27b5edc1ae24736c M	terraform.tfstate.backup

@@ -1,0 +1,68 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.36">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@1.5.0"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@1.5.0">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.5">
+      <projectUrl>https://github.com/Lemax-Dev/infrastructure-repo.git/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>paramTEAM_AREA</name>
+          <description>Depending on what team you are part of, your server will be built into a different subnet.</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>bookingteam</string>
+              <string>skywardsteam</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers/>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.78">
+    <script>node {
+    paramDEPLOYBRANCH = &quot;UAT&quot;
+
+    stage(&apos;Level 1 - Provision server&apos;) {
+        build job: &apos;./1.1-build-pipeline-jobs/level-1-build-server&apos;, parameters: [
+            string(name: &apos;TEAM_AREA&apos;, value: paramTEAM_AREA)
+        ]
+    }
+
+    stage(&apos;Level 2 - Install Vanilla Application&apos;) {
+        build job: &apos;./1.1-build-pipeline-jobs/level-2-install-vanilla-application&apos;, parameters: [
+            string(name: &apos;TARGETSERVERIP&apos;, value: $BUILD_PRIVATE_IP)
+        ]
+    }
+
+    stage(&apos;Level 3 - Deploy A Specific version of the codes&apos;) {
+        build job: &apos;./1.1-build-pipeline-jobs/level-3-deploy-a-specific-version-of-the-codes&apos;, parameters: [
+           string(name: &apos;TARGETSERVERIP&apos;, value: $BUILD_PRIVATE_IP),
+           string(name: &apos;DEPLOYBRANCH&apos;, value: paramDEPLOYBRANCH)
+        ]
+    }
+
+    stage(&apos;Final - Build Pipeline Completed&apos;) {
+        echo &apos;Hello World&apos;
+    }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

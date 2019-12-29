@@ -1,0 +1,71 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 508a4ef3a768ce2cdf3aa7e57b0d731510f2e446 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 508a4ef3a768ce2cdf3aa7e57b0d731510f2e446 # timeout=10
+Commit message: "Jenkins CI/CD automated run"
+ > git rev-list --no-walk 508a4ef3a768ce2cdf3aa7e57b0d731510f2e446 # timeout=10
+[level-1-build-server] $ /bin/bash /tmp/jenkins7044791652561852750.sh
+/var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+main.tf
+mmra.txt
+molema
+README.md
+terraform.tfstate
+terraform.tfstate.backup
+/var/lib/jenkins
+==============Terraform Init==============
+==============Terraform Plan==============
+==============Terraform Apply==============
+==============Git status==============
+# HEAD detached from 5b434e4
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    mmra.txt
+#	deleted:    molema
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+==============Git Set Up==============
+==============Git Add==============
+warning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',
+whose behaviour will change in Git 2.0 with respect to paths you removed.
+Paths like 'mmra.txt' that are
+removed from your working tree are ignored with this version of Git.
+
+* 'git add --ignore-removal <pathspec>', which is the current default,
+  ignores paths you removed from your working tree.
+
+* 'git add --all <pathspec>' will let you also record the removals.
+
+Run 'git status' to check the paths you removed from your working tree.
+
+==============Git Commit==============
+# HEAD detached from 5b434e4
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    mmra.txt
+#	deleted:    molema
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+==============Git Push==============
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Pushing HEAD to branch master at repo origin
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git push https://github.com/Lemax-Dev/infrastructure-repo.git HEAD:master # timeout=10
+Finished: SUCCESS

@@ -1,0 +1,190 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Cloning the remote Git repository
+Cloning repository https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git init /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision af45b8d08e70b4136741f4c10c48366ba8915e68 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f af45b8d08e70b4136741f4c10c48366ba8915e68 # timeout=10
+Commit message: "Jenkins CI/CD automated build run"
+ > git rev-list --no-walk af45b8d08e70b4136741f4c10c48366ba8915e68 # timeout=10
+[level-1-build-server] $ /bin/sh -xe /tmp/jenkins8586471578534851737.sh
++ echo '==============Terraform Init=============='
+==============Terraform Init==============
++ terraform init
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins...
+- Downloading plugin for provider "aws" (hashicorp/aws) 2.43.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 2.43"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
++ echo '==============Setting Instance Name Id=============='
+==============Setting Instance Name Id==============
++ instanceNameId=5867
++ echo '==============Test if Booking Team=============='
+==============Test if Booking Team==============
++ '[' bookingteam == bookingteam ']'
++ echo 'resource "aws_instance" "bookingteam-dev-5867" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-5867"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}'
++ echo '==============CAT THE FILE=============='
+==============CAT THE FILE==============
++ cat bookingteam.tf
+resource "aws_instance" "bookingteam-dev-01" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-01"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}
+resource "aws_instance" "bookingteam-dev-28078" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-28078"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}
+resource "aws_instance" "bookingteam-dev-5867" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-5867"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}
++ echo '==============Test if Skywards Team=============='
+==============Test if Skywards Team==============
++ '[' bookingteam == skywardsteam ']'
++ echo '==============Terraform Plan=============='
+==============Terraform Plan==============
++ echo '==============Terraform Apply=============='
+==============Terraform Apply==============
++ echo '==============Git Add=============='
+==============Git Add==============
++ echo '==============Git Add=============='
+==============Git Add==============
++ echo '==============Git Add=============='
+==============Git Add==============
++ echo '==============Git Add=============='
+==============Git Add==============
++ terraform state show aws_instance.bookingteam-dev-01
+# aws_instance.bookingteam-dev-01:
+resource "aws_instance" "bookingteam-dev-01" {
+    [1m[0mami[0m[0m                          = "ami-0ee2cc04e6a530d94"
+    [1m[0marn[0m[0m                          = "arn:aws:ec2:eu-west-1:897877382310:instance/i-07ec52733607bd732"
+    [1m[0massociate_public_ip_address[0m[0m  = true
+    [1m[0mavailability_zone[0m[0m            = "eu-west-1c"
+    [1m[0mcpu_core_count[0m[0m               = 1
+    [1m[0mcpu_threads_per_core[0m[0m         = 1
+    [1m[0mdisable_api_termination[0m[0m      = false
+    [1m[0mebs_optimized[0m[0m                = false
+    [1m[0mget_password_data[0m[0m            = false
+    [1m[0mid[0m[0m                           = "i-07ec52733607bd732"
+    [1m[0minstance_state[0m[0m               = "running"
+    [1m[0minstance_type[0m[0m                = "t2.micro"
+    [1m[0mipv6_address_count[0m[0m           = 0
+    [1m[0mipv6_addresses[0m[0m               = []
+    [1m[0mkey_name[0m[0m                     = "lemaxdevkey"
+    [1m[0mmonitoring[0m[0m                   = false
+    [1m[0mprimary_network_interface_id[0m[0m = "eni-038ea8fca87b5b08a"
+    [1m[0mprivate_dns[0m[0m                  = "ip-172-31-46-218.eu-west-1.compute.internal"
+    [1m[0mprivate_ip[0m[0m                   = "172.31.46.218"
+    [1m[0mpublic_dns[0m[0m                   = "ec2-34-240-108-120.eu-west-1.compute.amazonaws.com"
+    [1m[0mpublic_ip[0m[0m                    = "34.240.108.120"
+    [1m[0msecurity_groups[0m[0m              = [
+        "Future Airlines - App Security group - Default",
+    ]
+    [1m[0msource_dest_check[0m[0m            = true
+    [1m[0msubnet_id[0m[0m                    = "subnet-a4ad10fc"
+    [1m[0mtags[0m[0m                         = {
+        "Name" = "bookingteam-dev-01"
+    }
+    [1m[0mtenancy[0m[0m                      = "default"
+    [1m[0mvolume_tags[0m[0m                  = {}
+    [1m[0mvpc_security_group_ids[0m[0m       = [
+        "sg-0008be08e1a39844f",
+    ]
+
+    credit_specification {
+        [1m[0mcpu_credits[0m[0m = "standard"
+    }
+
+    root_block_device {
+        [1m[0mdelete_on_termination[0m[0m = true
+        [1m[0mencrypted[0m[0m             = false
+        [1m[0miops[0m[0m                  = 100
+        [1m[0mvolume_id[0m[0m             = "vol-06d2065564f5b4adf"
+        [1m[0mvolume_size[0m[0m           = 15
+        [1m[0mvolume_type[0m[0m           = "gp2"
+    }
+}[0m[0m
++ echo '==============Git Add=============='
+==============Git Add==============
++ echo '==============Git Commit=============='
+==============Git Commit==============
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Pushing HEAD to branch master at repo origin
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git push https://github.com/Lemax-Dev/infrastructure-repo.git HEAD:master # timeout=10
+Finished: SUCCESS

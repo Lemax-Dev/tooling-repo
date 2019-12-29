@@ -1,0 +1,54 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-2-install-vanilla-application
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+[level-2-install-vanilla-application] $ /bin/sh -xe /tmp/jenkins2223894872624780226.sh
++ ssh ec2-user@34.244.13.76 '
+sudo yum install httpd;
+sudo service httpd start;
+sudo systemctl enable httpd;
+sudo service httpd status
+'
+Loaded plugins: amazon-id, rhui-lb
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-90.el7 will be installed
+--> Processing Dependency: httpd-tools = 2.4.6-90.el7 for package: httpd-2.4.6-90.el7.x86_64
+--> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd-2.4.6-90.el7.x86_64
+--> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd-2.4.6-90.el7.x86_64
+--> Running transaction check
+---> Package apr.x86_64 0:1.4.8-5.el7 will be installed
+---> Package apr-util.x86_64 0:1.5.2-6.el7 will be installed
+---> Package httpd-tools.x86_64 0:2.4.6-90.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package       Arch     Version        Repository                          Size
+================================================================================
+Installing:
+ httpd         x86_64   2.4.6-90.el7   rhui-REGION-rhel-server-releases   1.2 M
+Installing for dependencies:
+ apr           x86_64   1.4.8-5.el7    rhui-REGION-rhel-server-releases   104 k
+ apr-util      x86_64   1.5.2-6.el7    rhui-REGION-rhel-server-releases    92 k
+ httpd-tools   x86_64   2.4.6-90.el7   rhui-REGION-rhel-server-releases    91 k
+
+Transaction Summary
+================================================================================
+Install  1 Package (+3 Dependent packages)
+
+Total download size: 1.5 M
+Installed size: 4.3 M
+Is this ok [y/d/N]: Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2019-12-28.11-43.9O16Ft.yumtx
+Redirecting to /bin/systemctl start  httpd.service
+Failed to start httpd.service: Unit not found.
+Failed to execute operation: Access denied
+Redirecting to /bin/systemctl status  httpd.service
+Unit httpd.service could not be found.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

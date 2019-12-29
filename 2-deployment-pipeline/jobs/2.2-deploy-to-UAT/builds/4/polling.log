@@ -1,0 +1,12 @@
+Started on Dec 28, 2019 5:41:09 PM
+Started by event from 192.30.252.98 ⇒ http://34.255.114.198:8080/github-webhook/ on Sat Dec 28 17:41:09 EST 2019
+Using strategy: Default
+[poll] Last Built Revision: Revision ea741a8bbd1ea5f049ba20bee6d90b3b8fa61c39 (refs/remotes/origin/UAT)
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git ls-remote -h https://github.com/Lemax-Dev/control-repo.git # timeout=10
+Found 6 remote heads on https://github.com/Lemax-Dev/control-repo.git
+[poll] Latest remote head revision on refs/heads/UAT is: e83f9e28b019b261eacc411f7f6b6b53c4051fa8
+Done. Took 0.54 sec
+Changes found

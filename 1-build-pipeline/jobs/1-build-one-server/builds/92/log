@@ -1,0 +1,100 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Cloning the remote Git repository
+Cloning repository https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git init /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision b79cbbb1228b29a357450465ce1a9beb35bdba4c (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b79cbbb1228b29a357450465ce1a9beb35bdba4c # timeout=10
+Commit message: "Jenkins CI/CD automated run"
+ > git rev-list --no-walk b79cbbb1228b29a357450465ce1a9beb35bdba4c # timeout=10
+[level-1-build-server] $ /bin/sh -xe /tmp/jenkins2925781770422311769.sh
++ echo '==============Test if Booking Team=============='
+==============Test if Booking Team==============
++ '[' bookingteam == bookingteam ']'
++ echo 'resource aws_instance bookingteam-dev-02 {
+  ami  = ami-0ee2cc04e6a530d94
+  instance_type  = t2.micro
+  vpc_security_group_ids  = [sg-0008be08e1a39844f]
+  key_name  = lemaxdevkey  
+  tags = {
+    Name  = bookingteam-dev-02
+  }
+  root_block_device {
+    volume_size  = 15
+  }
+}'
++ echo '==============CAT THE FILE=============='
+==============CAT THE FILE==============
++ cat bookingteam.tf
+resource "aws_instance" "bookingteam-dev-01" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-01"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}
+resource aws_instance bookingteam-dev-02 {
+  ami  = ami-0ee2cc04e6a530d94
+  instance_type  = t2.micro
+  vpc_security_group_ids  = [sg-0008be08e1a39844f]
+  key_name  = lemaxdevkey  
+  tags = {
+    Name  = bookingteam-dev-02
+  }
+  root_block_device {
+    volume_size  = 15
+  }
+}
++ echo '==============Test if Skywards Team=============='
+==============Test if Skywards Team==============
++ '[' bookingteam == skywardsteam ']'
++ echo '==============Terraform Plan=============='
+==============Terraform Plan==============
++ terraform plan
+[31m
+[1m[31mError: [0m[0m[1mCould not satisfy plugin requirements[0m
+
+[0m
+Plugin reinitialization required. Please run "terraform init".
+
+Plugins are external binaries that Terraform uses to access and manipulate
+resources. The configuration provided requires plugins which can't be located,
+don't satisfy the version constraints, or are otherwise incompatible.
+
+Terraform automatically discovers provider requirements from your
+configuration, including providers used in child modules. To see the
+requirements and constraints from each module, run "terraform providers".
+
+[0m[0m
+[31m
+[1m[31mError: [0m[0m[1mprovider.aws: no suitable version installed
+  version requirements: "(any version)"
+  versions installed: none[0m
+
+[0m[0m[0m
+Build step 'Execute shell' marked build as failure
+Build did not succeed and the project is configured to only push after a successful build, so no pushing will occur.
+Finished: FAILURE

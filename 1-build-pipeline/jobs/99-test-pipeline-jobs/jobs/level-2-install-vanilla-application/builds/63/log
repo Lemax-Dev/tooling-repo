@@ -1,0 +1,66 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-2-install-vanilla-application
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+[level-2-install-vanilla-application] $ /bin/sh -xe /tmp/jenkins4791737815192726904.sh
++ ssh ec2-user@34.244.13.76 '
+sudo yum install -y httpd;
+sudo service httpd start;
+sudo systemctl enable httpd;
+sudo service httpd status
+'
+Loaded plugins: amazon-id, rhui-lb
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-90.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package  Arch      Version           Repository                           Size
+================================================================================
+Installing:
+ httpd    x86_64    2.4.6-90.el7      rhui-REGION-rhel-server-releases    1.2 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 1.2 M
+Installed size: 3.7 M
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : httpd-2.4.6-90.el7.x86_64                                    1/1 
+  Verifying  : httpd-2.4.6-90.el7.x86_64                                    1/1 
+
+Installed:
+  httpd.x86_64 0:2.4.6-90.el7                                                   
+
+Complete!
+Redirecting to /bin/systemctl start  httpd.service
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+Redirecting to /bin/systemctl status  httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sat 2019-12-28 11:50:58 EST; 104ms ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 1295 (httpd)
+   Status: "Processing requests..."
+   CGroup: /system.slice/httpd.service
+           ├─1295 /usr/sbin/httpd -DFOREGROUND
+           ├─1296 /usr/sbin/httpd -DFOREGROUND
+           ├─1297 /usr/sbin/httpd -DFOREGROUND
+           ├─1298 /usr/sbin/httpd -DFOREGROUND
+           ├─1299 /usr/sbin/httpd -DFOREGROUND
+           └─1300 /usr/sbin/httpd -DFOREGROUND
+
+Dec 28 11:50:58 ip-172-31-35-199.eu-west-1.compute.internal systemd[1]: Starting The Apache HTTP Server...
+Dec 28 11:50:58 ip-172-31-35-199.eu-west-1.compute.internal systemd[1]: Started The Apache HTTP Server.
+Finished: SUCCESS

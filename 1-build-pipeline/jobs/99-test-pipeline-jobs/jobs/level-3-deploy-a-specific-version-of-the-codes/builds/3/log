@@ -1,0 +1,339 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-3-deploy-a-specific-version-of-the-codes
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Lemax-Dev/control-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/control-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/control-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/UAT^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/UAT^{commit} # timeout=10
+Checking out Revision 2d866a2e25ef89bf16a2e070d8e9edc34eb87877 (refs/remotes/origin/UAT)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2d866a2e25ef89bf16a2e070d8e9edc34eb87877 # timeout=10
+Commit message: "Merge pull request #1 from Lemax-Dev/feature-bookingteam"
+ > git rev-list --no-walk 2d866a2e25ef89bf16a2e070d8e9edc34eb87877 # timeout=10
+[level-3-deploy-a-specific-version-of-the-codes] $ /bin/sh -xe /tmp/jenkins482939168771959090.sh
++ zip -r transfer.zip ./about.html ./contact.html ./destinations.html ./elements.html ./images ./index.html ./js ./news.html ./plugins ./README.md ./styles ./transfer.zip
+updating: about.html (deflated 82%)
+updating: contact.html (deflated 78%)
+updating: destinations.html (deflated 84%)
+updating: elements.html (deflated 84%)
+updating: images/ (stored 0%)
+updating: images/about.jpg (deflated 1%)
+updating: images/about_1.jpg (deflated 0%)
+updating: images/around.svg (deflated 57%)
+updating: images/beach.svg (deflated 66%)
+updating: images/boat.svg (deflated 75%)
+updating: images/camera.svg (deflated 70%)
+updating: images/contact.jpg (deflated 1%)
+updating: images/destination_1.jpg (deflated 0%)
+updating: images/destination_2.jpg (deflated 0%)
+updating: images/destination_3.jpg (deflated 0%)
+updating: images/destination_4.jpg (deflated 1%)
+updating: images/destination_5.jpg (deflated 0%)
+updating: images/destination_6.jpg (deflated 0%)
+updating: images/destination_7.jpg (deflated 2%)
+updating: images/destination_8.jpg (deflated 1%)
+updating: images/destination_9.jpg (deflated 2%)
+updating: images/destinations.jpg (deflated 2%)
+updating: images/elements.jpg (deflated 3%)
+updating: images/footer_1.jpg (deflated 0%)
+updating: images/home_slider.jpg (deflated 4%)
+updating: images/intro.png (deflated 1%)
+updating: images/island.svg (deflated 58%)
+updating: images/latest_1.jpg (deflated 6%)
+updating: images/latest_2.jpg (deflated 14%)
+updating: images/latest_3.jpg (deflated 6%)
+updating: images/mountain.svg (deflated 64%)
+updating: images/news.jpg (deflated 1%)
+updating: images/news_1.jpg (deflated 2%)
+updating: images/news_2.jpg (deflated 1%)
+updating: images/news_3.jpg (deflated 0%)
+updating: images/news_4.jpg (deflated 2%)
+updating: images/news_5.jpg (deflated 0%)
+updating: images/news_6.jpg (deflated 0%)
+updating: images/sign.svg (deflated 59%)
+updating: images/suitcase.svg (deflated 69%)
+updating: images/team_1.jpg (deflated 4%)
+updating: images/team_2.jpg (deflated 4%)
+updating: images/team_3.jpg (deflated 3%)
+updating: images/team_4.jpg (deflated 3%)
+updating: images/testimonials.jpg (deflated 2%)
+updating: images/travello.jpg (deflated 0%)
+updating: images/trekking.svg (deflated 58%)
+updating: images/wallet.svg (deflated 73%)
+updating: images/why.jpg (deflated 1%)
+updating: images/why_1.jpg (deflated 2%)
+updating: images/why_1.svg (deflated 57%)
+updating: images/why_2.jpg (deflated 0%)
+updating: images/why_2.svg (deflated 58%)
+updating: images/why_3.jpg (deflated 1%)
+updating: images/why_3.svg (deflated 57%)
+updating: index.html (deflated 84%)
+updating: js/ (stored 0%)
+updating: js/about.js (deflated 67%)
+updating: js/contact.js (deflated 65%)
+updating: js/custom.js (deflated 69%)
+updating: js/destinations.js (deflated 68%)
+updating: js/elements.js (deflated 71%)
+updating: js/jquery-3.2.1.min.js (deflated 65%)
+updating: js/news.js (deflated 68%)
+updating: news.html (deflated 83%)
+updating: plugins/ (stored 0%)
+updating: plugins/Isotope/ (stored 0%)
+updating: plugins/Isotope/isotope.pkgd.min.js (deflated 72%)
+updating: plugins/OwlCarousel2-2.2.1/ (stored 0%)
+updating: plugins/OwlCarousel2-2.2.1/ajax-loader.gif (deflated 19%)
+updating: plugins/OwlCarousel2-2.2.1/animate.css (deflated 94%)
+updating: plugins/OwlCarousel2-2.2.1/owl.carousel.css (deflated 74%)
+updating: plugins/OwlCarousel2-2.2.1/owl.carousel.js (deflated 78%)
+updating: plugins/OwlCarousel2-2.2.1/owl.theme.default.css (deflated 61%)
+updating: plugins/OwlCarousel2-2.2.1/owl.video.play.png (deflated 5%)
+updating: plugins/easing/ (stored 0%)
+updating: plugins/easing/easing.js (deflated 76%)
+updating: plugins/font-awesome-4.7.0/ (stored 0%)
+updating: plugins/font-awesome-4.7.0/HELP-US-OUT.txt (deflated 34%)
+updating: plugins/font-awesome-4.7.0/css/ (stored 0%)
+updating: plugins/font-awesome-4.7.0/css/font-awesome.css (deflated 80%)
+updating: plugins/font-awesome-4.7.0/css/font-awesome.min.css (deflated 77%)
+updating: plugins/font-awesome-4.7.0/fonts/ (stored 0%)
+updating: plugins/font-awesome-4.7.0/fonts/FontAwesome.otf (deflated 18%)
+updating: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.eot (deflated 41%)
+updating: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.svg (deflated 69%)
+updating: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf (deflated 41%)
+updating: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff (deflated 0%)
+updating: plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2 (deflated 0%)
+updating: plugins/font-awesome-4.7.0/less/ (stored 0%)
+updating: plugins/font-awesome-4.7.0/less/animated.less (deflated 74%)
+updating: plugins/font-awesome-4.7.0/less/bordered-pulled.less (deflated 63%)
+updating: plugins/font-awesome-4.7.0/less/core.less (deflated 40%)
+updating: plugins/font-awesome-4.7.0/less/fixed-width.less (deflated 20%)
+updating: plugins/font-awesome-4.7.0/less/font-awesome.less (deflated 55%)
+updating: plugins/font-awesome-4.7.0/less/icons.less (deflated 87%)
+updating: plugins/font-awesome-4.7.0/less/larger.less (deflated 52%)
+updating: plugins/font-awesome-4.7.0/less/list.less (deflated 46%)
+updating: plugins/font-awesome-4.7.0/less/mixins.less (deflated 53%)
+updating: plugins/font-awesome-4.7.0/less/path.less (deflated 66%)
+updating: plugins/font-awesome-4.7.0/less/rotated-flipped.less (deflated 65%)
+updating: plugins/font-awesome-4.7.0/less/screen-reader.less (deflated 47%)
+updating: plugins/font-awesome-4.7.0/less/stacked.less (deflated 54%)
+updating: plugins/font-awesome-4.7.0/less/variables.less (deflated 75%)
+updating: plugins/font-awesome-4.7.0/scss/ (stored 0%)
+updating: plugins/font-awesome-4.7.0/scss/_animated.scss (deflated 74%)
+updating: plugins/font-awesome-4.7.0/scss/_bordered-pulled.scss (deflated 63%)
+updating: plugins/font-awesome-4.7.0/scss/_core.scss (deflated 41%)
+updating: plugins/font-awesome-4.7.0/scss/_fixed-width.scss (deflated 20%)
+updating: plugins/font-awesome-4.7.0/scss/_icons.scss (deflated 87%)
+updating: plugins/font-awesome-4.7.0/scss/_larger.scss (deflated 52%)
+updating: plugins/font-awesome-4.7.0/scss/_list.scss (deflated 47%)
+updating: plugins/font-awesome-4.7.0/scss/_mixins.scss (deflated 54%)
+updating: plugins/font-awesome-4.7.0/scss/_path.scss (deflated 66%)
+updating: plugins/font-awesome-4.7.0/scss/_rotated-flipped.scss (deflated 66%)
+updating: plugins/font-awesome-4.7.0/scss/_screen-reader.scss (deflated 46%)
+updating: plugins/font-awesome-4.7.0/scss/_stacked.scss (deflated 55%)
+updating: plugins/font-awesome-4.7.0/scss/_variables.scss (deflated 75%)
+updating: plugins/font-awesome-4.7.0/scss/font-awesome.scss (deflated 49%)
+updating: plugins/greensock/ (stored 0%)
+updating: plugins/greensock/ScrollToPlugin.min.js (deflated 56%)
+updating: plugins/greensock/TimelineMax.min.js (deflated 71%)
+updating: plugins/greensock/TweenMax.min.js (deflated 67%)
+updating: plugins/greensock/animation.gsap.min.js (deflated 50%)
+updating: plugins/parallax-js-master/ (stored 0%)
+updating: plugins/parallax-js-master/parallax.min.js (deflated 66%)
+updating: plugins/progressbar/ (stored 0%)
+updating: plugins/progressbar/progressbar.min.js (deflated 68%)
+updating: plugins/scrollTo/ (stored 0%)
+updating: plugins/scrollTo/jquery.scrollTo.min.js (deflated 48%)
+updating: plugins/scrollmagic/ (stored 0%)
+updating: plugins/scrollmagic/ScrollMagic.min.js (deflated 65%)
+updating: README.md (deflated 13%)
+updating: styles/ (stored 0%)
+updating: styles/about.css (deflated 83%)
+updating: styles/about_responsive.css (deflated 78%)
+updating: styles/bootstrap4/ (stored 0%)
+updating: styles/bootstrap4/bootstrap.min.css (deflated 85%)
+updating: styles/bootstrap4/bootstrap.min.js (deflated 74%)
+updating: styles/bootstrap4/popper.js (deflated 74%)
+updating: styles/contact.css (deflated 84%)
+updating: styles/contact_responsive.css (deflated 79%)
+updating: styles/destinations.css (deflated 83%)
+updating: styles/destinations_responsive.css (deflated 78%)
+updating: styles/elements.css (deflated 84%)
+updating: styles/elements_responsive.css (deflated 78%)
+updating: styles/main_styles.css (deflated 84%)
+updating: styles/news.css (deflated 84%)
+updating: styles/news_responsive.css (deflated 78%)
+updating: styles/responsive.css (deflated 78%)
++ scp ./transfer.zip ec2-user@34.244.97.78:/tmp/
++ ssh ec2-user@34.244.97.78 '
+ls /var/www/html ; 
+rm -rf /var/www/html/* ;
+sudo unzip /tmp/transfer.zip -d /var/www/html ; 
+ls /var/www/html'
+Archive:  /tmp/transfer.zip
+  inflating: /var/www/html/about.html  
+  inflating: /var/www/html/contact.html  
+  inflating: /var/www/html/destinations.html  
+  inflating: /var/www/html/elements.html  
+   creating: /var/www/html/images/
+  inflating: /var/www/html/images/about.jpg  
+  inflating: /var/www/html/images/about_1.jpg  
+  inflating: /var/www/html/images/around.svg  
+  inflating: /var/www/html/images/beach.svg  
+  inflating: /var/www/html/images/boat.svg  
+  inflating: /var/www/html/images/camera.svg  
+  inflating: /var/www/html/images/contact.jpg  
+  inflating: /var/www/html/images/destination_1.jpg  
+  inflating: /var/www/html/images/destination_2.jpg  
+  inflating: /var/www/html/images/destination_3.jpg  
+  inflating: /var/www/html/images/destination_4.jpg  
+  inflating: /var/www/html/images/destination_5.jpg  
+  inflating: /var/www/html/images/destination_6.jpg  
+  inflating: /var/www/html/images/destination_7.jpg  
+  inflating: /var/www/html/images/destination_8.jpg  
+  inflating: /var/www/html/images/destination_9.jpg  
+  inflating: /var/www/html/images/destinations.jpg  
+  inflating: /var/www/html/images/elements.jpg  
+  inflating: /var/www/html/images/footer_1.jpg  
+  inflating: /var/www/html/images/home_slider.jpg  
+  inflating: /var/www/html/images/intro.png  
+  inflating: /var/www/html/images/island.svg  
+  inflating: /var/www/html/images/latest_1.jpg  
+  inflating: /var/www/html/images/latest_2.jpg  
+  inflating: /var/www/html/images/latest_3.jpg  
+  inflating: /var/www/html/images/mountain.svg  
+  inflating: /var/www/html/images/news.jpg  
+  inflating: /var/www/html/images/news_1.jpg  
+  inflating: /var/www/html/images/news_2.jpg  
+  inflating: /var/www/html/images/news_3.jpg  
+  inflating: /var/www/html/images/news_4.jpg  
+  inflating: /var/www/html/images/news_5.jpg  
+  inflating: /var/www/html/images/news_6.jpg  
+  inflating: /var/www/html/images/sign.svg  
+  inflating: /var/www/html/images/suitcase.svg  
+  inflating: /var/www/html/images/team_1.jpg  
+  inflating: /var/www/html/images/team_2.jpg  
+  inflating: /var/www/html/images/team_3.jpg  
+  inflating: /var/www/html/images/team_4.jpg  
+  inflating: /var/www/html/images/testimonials.jpg  
+  inflating: /var/www/html/images/travello.jpg  
+  inflating: /var/www/html/images/trekking.svg  
+  inflating: /var/www/html/images/wallet.svg  
+  inflating: /var/www/html/images/why.jpg  
+  inflating: /var/www/html/images/why_1.jpg  
+  inflating: /var/www/html/images/why_1.svg  
+  inflating: /var/www/html/images/why_2.jpg  
+  inflating: /var/www/html/images/why_2.svg  
+  inflating: /var/www/html/images/why_3.jpg  
+  inflating: /var/www/html/images/why_3.svg  
+  inflating: /var/www/html/index.html  
+   creating: /var/www/html/js/
+  inflating: /var/www/html/js/about.js  
+  inflating: /var/www/html/js/contact.js  
+  inflating: /var/www/html/js/custom.js  
+  inflating: /var/www/html/js/destinations.js  
+  inflating: /var/www/html/js/elements.js  
+  inflating: /var/www/html/js/jquery-3.2.1.min.js  
+  inflating: /var/www/html/js/news.js  
+  inflating: /var/www/html/news.html  
+   creating: /var/www/html/plugins/
+   creating: /var/www/html/plugins/Isotope/
+  inflating: /var/www/html/plugins/Isotope/isotope.pkgd.min.js  
+   creating: /var/www/html/plugins/OwlCarousel2-2.2.1/
+  inflating: /var/www/html/plugins/OwlCarousel2-2.2.1/ajax-loader.gif  
+  inflating: /var/www/html/plugins/OwlCarousel2-2.2.1/animate.css  
+  inflating: /var/www/html/plugins/OwlCarousel2-2.2.1/owl.carousel.css  
+  inflating: /var/www/html/plugins/OwlCarousel2-2.2.1/owl.carousel.js  
+  inflating: /var/www/html/plugins/OwlCarousel2-2.2.1/owl.theme.default.css  
+  inflating: /var/www/html/plugins/OwlCarousel2-2.2.1/owl.video.play.png  
+   creating: /var/www/html/plugins/easing/
+  inflating: /var/www/html/plugins/easing/easing.js  
+   creating: /var/www/html/plugins/font-awesome-4.7.0/
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/HELP-US-OUT.txt  
+   creating: /var/www/html/plugins/font-awesome-4.7.0/css/
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/css/font-awesome.css  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/css/font-awesome.min.css  
+   creating: /var/www/html/plugins/font-awesome-4.7.0/fonts/
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/fonts/FontAwesome.otf  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.eot  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.svg  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2  
+   creating: /var/www/html/plugins/font-awesome-4.7.0/less/
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/animated.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/bordered-pulled.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/core.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/fixed-width.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/font-awesome.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/icons.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/larger.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/list.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/mixins.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/path.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/rotated-flipped.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/screen-reader.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/stacked.less  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/less/variables.less  
+   creating: /var/www/html/plugins/font-awesome-4.7.0/scss/
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_animated.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_bordered-pulled.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_core.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_fixed-width.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_icons.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_larger.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_list.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_mixins.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_path.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_rotated-flipped.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_screen-reader.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_stacked.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/_variables.scss  
+  inflating: /var/www/html/plugins/font-awesome-4.7.0/scss/font-awesome.scss  
+   creating: /var/www/html/plugins/greensock/
+  inflating: /var/www/html/plugins/greensock/ScrollToPlugin.min.js  
+  inflating: /var/www/html/plugins/greensock/TimelineMax.min.js  
+  inflating: /var/www/html/plugins/greensock/TweenMax.min.js  
+  inflating: /var/www/html/plugins/greensock/animation.gsap.min.js  
+   creating: /var/www/html/plugins/parallax-js-master/
+  inflating: /var/www/html/plugins/parallax-js-master/parallax.min.js  
+   creating: /var/www/html/plugins/progressbar/
+  inflating: /var/www/html/plugins/progressbar/progressbar.min.js  
+   creating: /var/www/html/plugins/scrollTo/
+  inflating: /var/www/html/plugins/scrollTo/jquery.scrollTo.min.js  
+   creating: /var/www/html/plugins/scrollmagic/
+  inflating: /var/www/html/plugins/scrollmagic/ScrollMagic.min.js  
+  inflating: /var/www/html/README.md  
+   creating: /var/www/html/styles/
+  inflating: /var/www/html/styles/about.css  
+  inflating: /var/www/html/styles/about_responsive.css  
+   creating: /var/www/html/styles/bootstrap4/
+  inflating: /var/www/html/styles/bootstrap4/bootstrap.min.css  
+  inflating: /var/www/html/styles/bootstrap4/bootstrap.min.js  
+  inflating: /var/www/html/styles/bootstrap4/popper.js  
+  inflating: /var/www/html/styles/contact.css  
+  inflating: /var/www/html/styles/contact_responsive.css  
+  inflating: /var/www/html/styles/destinations.css  
+  inflating: /var/www/html/styles/destinations_responsive.css  
+  inflating: /var/www/html/styles/elements.css  
+  inflating: /var/www/html/styles/elements_responsive.css  
+  inflating: /var/www/html/styles/main_styles.css  
+  inflating: /var/www/html/styles/news.css  
+  inflating: /var/www/html/styles/news_responsive.css  
+  inflating: /var/www/html/styles/responsive.css  
+about.html
+contact.html
+destinations.html
+elements.html
+images
+index.html
+js
+news.html
+plugins
+README.md
+styles
+Finished: SUCCESS

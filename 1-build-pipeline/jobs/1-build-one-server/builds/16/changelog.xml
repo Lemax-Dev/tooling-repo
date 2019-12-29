@@ -1,0 +1,9 @@
+commit 5cb26812eeb8525a6e05cb045594aff954f3f07d
+tree 53d94fdf3363e465d4b0634ef92bfd8614e56394
+parent ef72d1ce6bcf54bd86a5e1492648b0ec1f1a2011
+author Molema.Lema <lemamolema@hotmail.fr> 2019-12-28 02:46:29 +0000
+committer GitHub <noreply@github.com> 2019-12-28 02:46:29 +0000
+
+    new AMI
+
+:100644 100644 259d275ac8f5ce0d0c2fe4f12e8b110f3ddd2350 c71437238dee6f19053c20cae5613d30158ee557 M	main.tf

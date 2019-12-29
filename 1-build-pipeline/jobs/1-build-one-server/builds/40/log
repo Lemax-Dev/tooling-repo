@@ -1,0 +1,49 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 5b434e43ed23bf69f0c4bef78e11ee68889ef4c9 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5b434e43ed23bf69f0c4bef78e11ee68889ef4c9 # timeout=10
+Commit message: "Jenkins CI/CD automated run"
+ > git rev-list --no-walk 5b434e43ed23bf69f0c4bef78e11ee68889ef4c9 # timeout=10
+[level-1-build-server] $ /bin/bash /tmp/jenkins4181807024655902437.sh
+/var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+main.tf
+molema
+README.md
+terraform.tfstate
+terraform.tfstate.backup
+/var/lib/jenkins
+==============Terraform Init==============
+==============Terraform Plan==============
+==============Terraform Apply==============
+==============Git status==============
+# HEAD detached at 5b434e4
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	mmra.txt
+nothing added to commit but untracked files present (use "git add" to track)
+==============Git Set Up==============
+==============Git Add==============
+==============Git Commit==============
+[detached HEAD 508a4ef] Jenkins CI/CD automated run
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mmra.txt
+==============Git Push==============
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Pushing HEAD to branch master at repo origin
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git push https://github.com/Lemax-Dev/infrastructure-repo.git HEAD:master # timeout=10
+Finished: SUCCESS

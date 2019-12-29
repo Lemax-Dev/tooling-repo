@@ -1,0 +1,20 @@
+commit 56b20859e91736c64e4dd775541d1f948e711a0c
+tree d4e34b2157f50ce30b36bb48ea3f949e5d01340c
+parent 62c5338800d959dfd592d81824fa977a4b980053
+author Molema.Lema <lemamolema@hotmail.fr> 2019-12-28 21:18:43 +0000
+committer GitHub <noreply@github.com> 2019-12-28 21:18:43 +0000
+
+    Update main.tf
+
+:100644 100644 60d3bb845865367d9cbdcc388b011110d3e8557c e27f0298d3f5f1882bd950c0c898495575553ebf M	main.tf
+commit 62c5338800d959dfd592d81824fa977a4b980053
+tree fef08de7a8e8b66280d98e260831be454ff3e88b
+parent 199a61d326786430171cb91124eaf1b3fe55f754
+author Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 16:17:11 -0500
+committer Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 16:17:11 -0500
+
+    Jenkins CI/CD automated run
+
+
+:100644 100644 2e326bd080bed394c5b6735c282e0c2ff45f50b4 72e850793b9ee81bfdae02d744ef97fade4a5008 M	terraform.tfstate
+:100644 100644 5cb22f6b0215419bdc256f616197c5937680fdb6 2e326bd080bed394c5b6735c282e0c2ff45f50b4 M	terraform.tfstate.backup

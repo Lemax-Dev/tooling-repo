@@ -1,0 +1,45 @@
+Started by GitHub push by Lemax-Dev
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 508a4ef3a768ce2cdf3aa7e57b0d731510f2e446 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 508a4ef3a768ce2cdf3aa7e57b0d731510f2e446 # timeout=10
+Commit message: "Jenkins CI/CD automated run"
+ > git rev-list --no-walk 5b434e43ed23bf69f0c4bef78e11ee68889ef4c9 # timeout=10
+[level-1-build-server] $ /bin/bash /tmp/jenkins1651257250754350241.sh
+/var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+main.tf
+mmra.txt
+molema
+README.md
+terraform.tfstate
+terraform.tfstate.backup
+/var/lib/jenkins
+==============Terraform Init==============
+==============Terraform Plan==============
+==============Terraform Apply==============
+==============Git status==============
+# HEAD detached from 5b434e4
+nothing to commit, working directory clean
+==============Git Set Up==============
+==============Git Add==============
+==============Git Commit==============
+# HEAD detached from 5b434e4
+nothing to commit, working directory clean
+==============Git Push==============
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Pushing HEAD to branch master at repo origin
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git push https://github.com/Lemax-Dev/infrastructure-repo.git HEAD:master # timeout=10
+Finished: SUCCESS

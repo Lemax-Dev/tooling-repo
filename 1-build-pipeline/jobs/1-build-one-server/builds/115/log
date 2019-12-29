@@ -1,0 +1,138 @@
+Started by user [8mha:////4Awm+zaOaC3f+14u/d1Xriuk1gn4ErIWisvfiCZ2FI7OAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9nNTcxIrElNzMPAA8uYolxQAAAA==[0mMolema Lema
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential e80fc1e6-135f-47cd-b9a4-b1075d8d5963
+Cloning the remote Git repository
+Cloning repository https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git init /var/lib/jenkins/workspace/1-build-pipeline/1.1-build-pipeline-jobs/level-1-build-server # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Lemax-Dev/infrastructure-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Lemax-Dev/infrastructure-repo.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/Lemax-Dev/infrastructure-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision af45b8d08e70b4136741f4c10c48366ba8915e68 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f af45b8d08e70b4136741f4c10c48366ba8915e68 # timeout=10
+Commit message: "Jenkins CI/CD automated build run"
+ > git rev-list --no-walk af45b8d08e70b4136741f4c10c48366ba8915e68 # timeout=10
+[level-1-build-server] $ /bin/sh -xe /tmp/jenkins3363143046791364282.sh
++ echo '==============Terraform Init=============='
+==============Terraform Init==============
++ terraform init
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins...
+- Downloading plugin for provider "aws" (hashicorp/aws) 2.43.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 2.43"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
++ echo '==============Setting Instance Name Id=============='
+==============Setting Instance Name Id==============
++ instanceNameId=22211
++ echo '==============Test if Booking Team=============='
+==============Test if Booking Team==============
++ '[' bookingteam == bookingteam ']'
++ echo 'resource "aws_instance" "bookingteam-dev-22211" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-22211"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}'
++ echo '==============CAT THE FILE=============='
+==============CAT THE FILE==============
++ cat bookingteam.tf
+resource "aws_instance" "bookingteam-dev-01" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-01"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}
+resource "aws_instance" "bookingteam-dev-28078" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-28078"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}
+resource "aws_instance" "bookingteam-dev-22211" {
+  ami  = "ami-0ee2cc04e6a530d94"
+  instance_type  = "t2.micro"
+  vpc_security_group_ids  = ["sg-0008be08e1a39844f"]
+  key_name  = "lemaxdevkey"  
+  tags = {
+    Name  = "bookingteam-dev-22211"
+  }
+  root_block_device {
+    volume_size  = "15"
+  }
+}
++ echo '==============Test if Skywards Team=============='
+==============Test if Skywards Team==============
++ '[' bookingteam == skywardsteam ']'
++ echo '==============Terraform Plan=============='
+==============Terraform Plan==============
++ echo '==============Terraform Apply=============='
+==============Terraform Apply==============
++ echo '==============Git Add=============='
+==============Git Add==============
++ echo '==============Git Add=============='
+==============Git Add==============
++ echo '==============Git Add=============='
+==============Git Add==============
++ echo '==============Git Add=============='
+==============Git Add==============
++ terraform state show aws_instance.bookingteam-dev-01.private_ip
+[31mError parsing instance address: aws_instance.bookingteam-dev-01.private_ip
+
+This command requires that the address references one specific instance.
+To view the available instances, use "terraform state list". Please modify 
+the address to reference a specific instance.[0m[0m
+Build step 'Execute shell' marked build as failure
+Build did not succeed and the project is configured to only push after a successful build, so no pushing will occur.
+Finished: FAILURE

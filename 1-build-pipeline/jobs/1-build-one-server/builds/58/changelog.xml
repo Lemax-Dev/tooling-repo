@@ -1,0 +1,11 @@
+commit 5f0c929adccf7f0656c4a04a686fce47efa3e6a2
+tree f0aa75d8c396efd5bfceb7997b069ba141dc1fec
+parent 0652de1b230cb909b8e78fc4f32bc96283025e28
+author Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 01:02:56 -0500
+committer Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 01:02:56 -0500
+
+    Jenkins CI/CD automated run
+
+
+:000000 100755 0000000000000000000000000000000000000000 1ef7a30368ae36723e19f0c5fa525f1fa0756605 A	.terraform/plugins/linux_amd64/lock.json
+:000000 100644 0000000000000000000000000000000000000000 488dc522c22d168e22c6bdddfa9d90b29e9de22f A	terraform.tfstate

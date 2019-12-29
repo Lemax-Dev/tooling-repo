@@ -1,0 +1,10 @@
+commit 508a4ef3a768ce2cdf3aa7e57b0d731510f2e446
+tree ff389e2ef2dbb5a960a997fb543e812f3f9e6f77
+parent 5b434e43ed23bf69f0c4bef78e11ee68889ef4c9
+author Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 00:21:51 -0500
+committer Lemax-Dev <lemamolema@hotmail.fr> 2019-12-28 00:21:51 -0500
+
+    Jenkins CI/CD automated run
+
+
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	mmra.txt

@@ -1,0 +1,18 @@
+commit a95550166f2979f00ab89165727d8c3375fb4fb5
+tree 575300f90544a357c41ee0b79b936e4d32528425
+parent e497dcc67c0dac1632ba353940bfbb8b4a1d6baf
+author Molema.Lema <lemamolema@hotmail.fr> 2019-12-28 05:57:15 +0000
+committer GitHub <noreply@github.com> 2019-12-28 05:57:15 +0000
+
+    Delete lock.json
+
+:100644 000000 40a91f996f7af01018d7ea5b2f8ad234fa36738b 0000000000000000000000000000000000000000 D	.terraform/plugins/windows_amd64/lock.json
+commit e497dcc67c0dac1632ba353940bfbb8b4a1d6baf
+tree ff54e5ab204cab224feb21d349c5b9c68637ce20
+parent a9b33124804a1d25eb3bd81e1f41c22832a21e2c
+author Molema.Lema <lemamolema@hotmail.fr> 2019-12-28 05:56:59 +0000
+committer GitHub <noreply@github.com> 2019-12-28 05:56:59 +0000
+
+    Delete terraform.tfstate
+
+:100644 000000 d36a07bd1fff6a32d80878a682359d5d7ccc64e4 0000000000000000000000000000000000000000 D	terraform.tfstate
